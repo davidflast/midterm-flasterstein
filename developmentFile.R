@@ -12,6 +12,8 @@ load_all(current.code)
 document(current.code)
 ?Trapezoid
 ?Simpson
+?integrateIt
+?printIntegrated
 z = integrateIt(vector_x = 1:11,
             vector_y = 1:11,
             a = 3,

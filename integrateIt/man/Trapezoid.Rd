@@ -31,7 +31,7 @@ An object of the class `Trapezoid' has the following slots:
           vector_y = 1:11, a = 3,b = 7)
  t = integrateIt(vector_x = 1:11,
                  vector_y = 1:11,
-                 a = 3, b = 7, rule = "Simp")
+                 a = 3, b = 7, rule = "Trap")
 }
 \author{
 David P. Flasterstein: \email{davidflasterstein@wustl.edu}
