@@ -10,15 +10,19 @@ package.skeleton(name="integrateIt")
 current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
-integrateIt(vector_x = 1:11,
+?Trapezoid
+?Simpson
+z = integrateIt(vector_x = 1:11,
             vector_y = 1:11,
             a = 3,
             b = 7, rule = "Simp")
-new("Trapezoid", vector_x = 1:11,
+print(z)
+v = new("Trapezoid", vector_x = 1:11,
     vector_y = 1:11,
     a = 3,
     b = 7
 )
+print(v)
 new("Simpson", vector_x = 1:11,
     vector_y = 1:11,
     a = 3,

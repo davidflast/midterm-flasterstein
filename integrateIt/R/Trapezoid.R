@@ -1,3 +1,33 @@
+#' A Trapezoid object
+#' 
+#' Object of class \code{Trapezoid} are created by the \code{integrateIt} function.
+#' This object takes in a vector of x and y and estimates the integral between a 
+#' and b using the Trapezoidal rule.
+#'
+#' 
+#' An object of the class `Trapezoid' has the following slots:
+#' \itemize{
+#' \item \code{vector_x} a vector of x values
+#' \item \code{vector_y} a vector of f(x) values
+#' \item \code{a} starting value of integration
+#' \item \code{b} ending value of integration
+#' \item \code{adjusted_x} vector_x within a and b
+#' \item \code{adjusted_y} vector_y within a and b
+#' \item \code{h} h value used for calculation
+#' \item \code{n} number of values between a and b
+#' \item \code{integrated_value} the integrated value using trapezoidal rule
+#' \item \code{scalar} vector of scalars used in calculation
+#' }
+#'
+#' @author David P. Flasterstein: \email{davidflasterstein@@wustl.edu}
+#' @aliases Trapezoid-class initialize,Trapezoid-method print
+#' @rdname Trapezoid
+#' @examples
+#'  T = new("Trapezoid", vector_x = 1:11,
+#'           vector_y = 1:11, a = 3,b = 7)
+#'  t = integrateIt(vector_x = 1:11,
+#'                  vector_y = 1:11,
+#'                  a = 3, b = 7, rule = "Trap")
 #' @export
 setClass(Class="Trapezoid",
          contains="integrated",
