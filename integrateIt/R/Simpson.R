@@ -44,6 +44,13 @@ setClass(Class="Simpson",
            scalar = c()
          )
 )
+setValidity("Simpson", function(object){
+  if((object@n %% 2) == 0){
+    return("There needs to be an even number of spaces 
+           between a and b to successfully calculate Simpsons")
+  }
+}
+)
 #' @export
 setMethod("initialize", "Simpson", 
           function(.Object, vector_x, vector_y, a, b, ...){

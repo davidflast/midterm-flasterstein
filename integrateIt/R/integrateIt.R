@@ -31,8 +31,20 @@
 #' @rdname integrateIt
 #' @export
 integrateIt <- function(vector_x, vector_y, a, b, rule){
+# Error checking is place here to catch errors before calculations are done later and to
+# provide more informative error messages
+# Error is printed out and the function is stopped
   if (!(rule == "Trap" | rule == "Simp")){
-    return("rule needs to equal Trap or Simp")
+    print("rule needs to equal Trap or Simp")
+    stop()
+  }
+  if(b <= a){
+    print("b needs to be greater than a")
+    stop()
+  }
+  if(length(vector_x) != length(vector_y)){
+    print("vector_x needs to be the same length as vector_y")
+    stop()
   }
   if(rule == "Trap"){
     object =  new("Trapezoid", vector_x = vector_x, 
@@ -40,6 +52,12 @@ integrateIt <- function(vector_x, vector_y, a, b, rule){
                      a = a, b = b)
   }
   if(rule == "Simp"){
+    n = length(which(vector_x >= a & vector_x <= b))
+    if(n %% 2 == 0){
+      print("There needs to be an even number of spaces 
+             between a and b to successfully calculate Simpsons")
+      stop()
+    }
     object = new("Simpson", vector_x = vector_x, 
         vector_y = vector_y,
         a = a, b = b)

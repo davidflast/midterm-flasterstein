@@ -28,3 +28,12 @@ setClass(Class="integrated",
            scalar = c()
          )
 )
+setValidity("integrated", function(object){
+  if(object@b <= object@a){
+    return("b needs to be greater than a")
+  }
+  if(length(object@vector_x) != length(object@vector_y)){
+    return("vector_x needs to be the same length as vector_y")
+  }
+}
+)

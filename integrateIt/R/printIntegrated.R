@@ -1,4 +1,4 @@
-#' Prints Trapezoid or Simpson objects
+#' Print Trapezoid or Simpson objects
 #'
 #' Inputting an object of class Trapezoid or Simpson prints out the integrated_value of those objects
 #'
@@ -17,6 +17,7 @@
 #'               a = 3, b = 7, rule = "Trap")
 #' print(t)
 #' @rdname printIntegrated
+#' @aliases Trapezoid-method printTrapezoid,Simpson-method printSimpson
 #' @export
 setMethod(f = "print",
           signature = "integrated",

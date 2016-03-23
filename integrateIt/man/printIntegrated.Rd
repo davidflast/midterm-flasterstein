@@ -2,8 +2,11 @@
 % Please edit documentation in R/printIntegrated.R
 \docType{methods}
 \name{print,integrated-method}
+\alias{Trapezoid-method}
 \alias{print,integrated-method}
-\title{Prints Trapezoid or Simpson objects}
+\alias{printSimpson}
+\alias{printTrapezoid,Simpson-method}
+\title{Print Trapezoid or Simpson objects}
 \usage{
 \S4method{print}{integrated}(x, ...)
 }
