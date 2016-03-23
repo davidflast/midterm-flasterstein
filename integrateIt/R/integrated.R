@@ -1,4 +1,4 @@
-# Creates a class integrated which forms the main class 
+# Creates a class integrated which forms the main class for 
 # the subclasses simpson and trapezoid.
 # Has the slots
 #' @export
