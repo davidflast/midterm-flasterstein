@@ -12,7 +12,8 @@ setClass(Class="integrated",
            adjusted_y = "numeric",
            integrated_value = "numeric",
            h = "numeric",
-           n = "numeric"
+           n = "numeric",
+           scalar = "numeric"
          ),
          prototype = prototype(
            vector_x = c(),
@@ -23,6 +24,7 @@ setClass(Class="integrated",
            adjusted_y = c(),
            integrated_value = c(),
            h = c(),
-           n = c()
+           n = c(),
+           scalar = c()
          )
 )

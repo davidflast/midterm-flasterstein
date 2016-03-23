@@ -1,5 +1,5 @@
 #' @export
-setClass(Class="Trapezoid",
+setClass(Class="Simpson",
          contains="integrated",
          prototype=prototype(
            vector_x = c(),
@@ -15,7 +15,7 @@ setClass(Class="Trapezoid",
          )
 )
 #' @export
-setMethod("initialize", "Trapezoid", 
+setMethod("initialize", "Simpson", 
           function(.Object, vector_x, vector_y, a, b, ...){
             .Object@vector_x = vector_x
             .Object@vector_y = vector_y
@@ -29,9 +29,9 @@ setMethod("initialize", "Trapezoid",
             .Object@n = n
             h = (b - a) / n
             .Object@h = h
-            scalar = c(1,rep(2, n - 2), 1)
+            scalar = c(1,rep(c(4,2), (n - 3)/2), 4, 1)
             .Object@scalar = scalar
-            .Object@integrated_value = h / 2 * sum((scalar * adjusted_y))
+            .Object@integrated_value = h / 3 * sum((scalar * adjusted_y))
             return(.Object)
           }
 ) 

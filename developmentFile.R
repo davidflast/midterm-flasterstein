@@ -11,11 +11,8 @@ current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
 
-new("Trapezoid", vector_x = 1,
-    vector_y = 1,
-    a = 1,
-    b = 1,
-    adjusted_x = 1,
-    adjusted_y = 1,
-    integrated_value = 1,
-    h = 1)
+new("Trapezoid", vector_x = 1:10,
+    vector_y = 1:10,
+    a = 3,
+    b = 7
+)
