@@ -8,7 +8,8 @@
 #' @param b ending point for integration
 #' @param rule either "Simp" or "Trap" to choose which object to make
 #'
-#' @return object An object of class Simpson or Trapezoid containing
+#' @return object An object of class Simpson or Trapezoid
+
 #' @author David Flaserstein
 #' @seealso \code{\link{Trapezoid}}\code{\link{Simpson}}
 #' @examples
