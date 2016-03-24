@@ -20,7 +20,7 @@
 #' }
 #'
 #' @author David P. Flasterstein: \email{davidflasterstein@@wustl.edu}
-#' @aliases Trapezoid-class initialize,Trapezoid-method print
+#' @aliases Trapezoid-class initialize,Trapezoid-method print,Trapezoid-method plot
 #' @rdname Trapezoid
 #' @examples
 #'  T = new("Trapezoid", vector_x = 1:11,

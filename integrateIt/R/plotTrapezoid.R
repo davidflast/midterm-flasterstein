@@ -17,19 +17,16 @@
 setMethod(f = "plot",
           signature = "Trapezoid",
           definition = function (x, ...) {
-            # sets up graph and plots the points
-            plot(x = x@adjusted_x, y = x@adjusted_y, 
-                   xlim=c(x@a,x@b),ylim=c(0, max(x@adjusted_y)+3), pch=19,
-                   xlab="x", ylab="f(x)",main="Trapezoidal Rule", col="red")
-            # plots the upper part of the trapezoid
-            lines(x@adjusted_x, x@adjusted_y,col = "red")
+              # sets up graph and plots the points
+              plot(x = x@adjusted_x, y = x@adjusted_y, 
+                     xlim=c(x@a,x@b),ylim=c(0, max(x@adjusted_y)+3), pch=19,
+                     xlab="x", ylab="f(x)",main="Trapezoidal Rule", col="red")
+              # plots the upper part of the trapezoid
+              lines(x@adjusted_x, x@adjusted_y,col = "red")
               # graphs vertical lines
-              for(i in 1:(x@n)){
-                x_point = x@adjusted_x[i]
-                y_point = x@adjusted_y[i]
-                x_vec = c(x_point,x_point)
-                y_vec = c(0,y_point)
-                lines(x=x_vec, y=y_vec, lty=2)
-              }
-            }
-)
+              segments(x0=x@adjusted_x,y0=0, x1=x@adjusted_x,y1=x@adjusted_y,lty=2)
+              # plots a and b points
+              points(x=x@adjusted_x[1],y=x@adjusted_y[1] + 1, pch="a")
+              points(x=x@adjusted_x[length(x@adjusted_x)],
+                     y=x@adjusted_y[length(x@adjusted_x)] + 1, pch="b")
+})

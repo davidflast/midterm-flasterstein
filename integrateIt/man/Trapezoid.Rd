@@ -4,7 +4,8 @@
 \name{Trapezoid-class}
 \alias{Trapezoid-class}
 \alias{initialize,Trapezoid-method}
-\alias{print}
+\alias{plot}
+\alias{print,Trapezoid-method}
 \title{A Trapezoid object}
 \description{
 Object of class \code{Trapezoid} are created by the \code{integrateIt} function.

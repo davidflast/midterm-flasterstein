@@ -20,7 +20,7 @@
 #' }
 #'
 #' @author David P. Flasterstein: \email{davidflasterstein@@wustl.edu}
-#' @aliases Simpson-class initialize,Simpson-method print
+#' @aliases Simpson-class initialize,Simpson-method print, Simpson-method plot
 #' @rdname Simpson
 #' @examples
 #'  S = new("Simpson", vector_x = 1:11,

@@ -3,8 +3,10 @@
 \docType{class}
 \name{Simpson-class}
 \alias{Simpson-class}
+\alias{Simpson-method}
 \alias{initialize,Simpson-method}
-\alias{print}
+\alias{plot}
+\alias{print,}
 \title{A Simpson object}
 \description{
 Object of class \code{Simpson} are created by the \code{integrateIt} function.

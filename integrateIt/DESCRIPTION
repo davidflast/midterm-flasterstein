@@ -5,10 +5,12 @@ Version: 1.0
 Date: 2016-03-23
 Author: David Flasterstein
 Maintainer: davidflasterstein@wustl.edu
-Description: integrates and plots trapezoidal and simpsons rules 
+Description: Integrates and plots trapezoidal and simpsons
+    rules of functions from a to b.
 License: What license is it under?
 Suggests:
     devtools
+    roxygen2
 Collate:
     'integrated.R'
     'Trapezoid.R'
@@ -16,5 +18,5 @@ Collate:
     'integrateIt.R'
     'printIntegrated.R'
     'plotTrapezoid.R'
-    'plotSimpson
+    'plotSimpson.R'
 RoxygenNote: 5.0.1

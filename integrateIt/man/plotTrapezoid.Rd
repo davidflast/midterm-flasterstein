@@ -3,7 +3,7 @@
 \docType{methods}
 \name{plot,Trapezoid-method}
 \alias{plot,Trapezoid-method}
-\title{Plots objects of Class Trapezoid}
+\title{Plot objects of class Trapezoid}
 \usage{
 \S4method{plot}{Trapezoid}(x, y, ...)
 }
@@ -11,10 +11,10 @@
 \item{x}{object of class Trapezoid}
 }
 \value{
-A graph of the integral that was taken
+A graph of the Trapezodial estimation of the integral that was taken
 }
 \description{
-Inputing an object of class Trapezoid plots an graph of the inregral that was taken
+Inputing an object of class Trapezoid plots an graph of the integral that was taken
 }
 \examples{
 

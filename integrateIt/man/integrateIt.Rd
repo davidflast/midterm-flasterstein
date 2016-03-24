@@ -4,7 +4,7 @@
 \alias{integrateIt}
 \title{Create objects of class Trapezoid or Simspon}
 \usage{
-integrateIt(vector_x, vector_y, a, b, rule)
+integrateIt(vector_x, vector_y, a, b, rule, ...)
 }
 \arguments{
 \item{vector_x}{A vector of x values}
