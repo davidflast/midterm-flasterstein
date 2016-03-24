@@ -11,7 +11,6 @@ current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
 build_win(current.code)
-?integrateIt
 # examples of integrate it
 s =integrateIt(vector_x = 1:11,
             vector_y = 1:11,

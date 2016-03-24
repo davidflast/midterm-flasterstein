@@ -7,7 +7,7 @@ Author: David Flasterstein
 Maintainer: David Flasterstein <davidflasterstein@wustl.edu>
 Description: Integrates and plots trapezoidal and simpsons
     rules of functions from a to b.
-License: What license is it under?
+License: BSD
 Suggests:
     devtools
 Collate:
