@@ -62,11 +62,11 @@ setMethod("initialize", "Simpson",
             .Object@adjusted_x = adjusted_x
             adjusted_y = vector_y[which(vector_x >= a & vector_x <= b)]
             .Object@adjusted_y = adjusted_y
-            n = length(which(vector_x >= a & vector_x <= b))
+            n = length(which(vector_x >= a & vector_x <= b)) - 1
             .Object@n = n
             h = (b - a) / n
             .Object@h = h
-            scalar = c(1,rep(c(4,2), (n - 3)/2), 4, 1)
+            scalar = c(1,rep(c(4,2), (n - 2)/2), 4, 1)
             .Object@scalar = scalar
             .Object@integrated_value = h / 3 * sum((scalar * adjusted_y))
             return(.Object)

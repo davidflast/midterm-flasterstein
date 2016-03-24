@@ -1,6 +1,6 @@
 #' Plot objects of class Trapezoid
 #'
-#' Inputing an object of class Trapezoid plots an graph of the inregral that was taken
+#' Inputing an object of class Trapezoid plots an graph of the integral that was taken
 #'
 #' @param x object of class Trapezoid
 #'

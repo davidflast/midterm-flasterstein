@@ -18,16 +18,18 @@ document(current.code)
 z = integrateIt(vector_x = 1:11,
             vector_y = 1:11,
             a = 5,
-            b = 10, rule = "Simp")
+            b = 10, rule = "trap")
 print(z)
+?plotTrapezoid
 ?plot
-v = new("Trapezoid", vector_x = 1:11,
-    vector_y = 1:11,
-    a = 3,
-    b = 7
+v = new("Simpson", vector_x = 1:5,
+    vector_y =c(5,6,10,2,7) ,
+    a = 1,
+    b = 5
 )
+plot(v)
 print(v)
-new("Simpson", vector_x = 1:11,
+v =new("Simpson", vector_x = 1:11,
     vector_y = 1:11,
     a = 3,
     b = 7

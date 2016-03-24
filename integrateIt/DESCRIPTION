@@ -16,4 +16,5 @@ Collate:
     'integrateIt.R'
     'printIntegrated.R'
     'plotTrapezoid.R'
+    'plotSimpson
 RoxygenNote: 5.0.1
