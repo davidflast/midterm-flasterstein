@@ -22,17 +22,21 @@ setMethod(f = "plot",
                  xlim=c(x@a,x@b),ylim=c(0, max(x@adjusted_y)+3), type = "n",
                  xlab="x", ylab="f(x)",main="Simpson's Rule")
             # plot vertical dotted lines to show how segments are seperated
-            segments(x0=x@adjusted_x,y0=0, x1=x@adjusted_x,y1=x@adjusted_y,lty=2)
+            segments(x0=x@adjusted_x, y0=0, x1=x@adjusted_x,y1=x@adjusted_y,lty=2)
+            # graph a and b solid lines
+            segments(x0=x@adjusted_x[1], y0=0, x1=x@adjusted_x[1],y1=x@adjusted_y[1],lty=1)
+            segments(x0=x@adjusted_x[length(x@adjusted_x)], 
+                     y0=0, x1=x@adjusted_x[length(x@adjusted_x)],
+                     y1=x@adjusted_y[length(x@adjusted_x)],lty=1)
             # plots a and b points
             points(x=x@adjusted_x[1],y=x@adjusted_y[1] + 1, pch="a")
             points(x=x@adjusted_x[length(x@adjusted_x)],
                    y=x@adjusted_y[length(x@adjusted_x)] + 1, pch="b")
             # draws the curves
-            for(i in 1:x@n - 1){
-              if(i %% 2 == 1 | i == 1){
+            sapply(seq(1,x@n -1,2), function(i) {
               u  <- x@adjusted_x[i]
               w  <- x@adjusted_x[i + 2]
-              v  <- (w - u) / 2
+              v  <- x@adjusted_x[i + 1]
               fu <- x@adjusted_y[i]
               fv <- x@adjusted_y[i + 1]
               fw <- x@adjusted_y[i + 2]
@@ -40,13 +44,6 @@ setMethod(f = "plot",
                   fv * ((x-u)*(x-w))/((v-u)*(v-w)) +
                   fw * ((x-u)*(x-v))/((w-u)*(w-v)), 
                   from=u, to=w, add = TRUE,col="red")
-            }
-              }
+              
+              })
           })
-?curve
-          
-          
-          
-          
-          
-          

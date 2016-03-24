@@ -14,7 +14,7 @@
 A graph of Simpson's estimation of the integral that was taken between a and b
 }
 \description{
-Inputing an object of class Simpson plots an graph of the integral that was taken
+Inputing an object of class Simpson plots a graph of the integral that was taken
 }
 \examples{
 

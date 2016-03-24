@@ -23,9 +23,14 @@ setMethod(f = "plot",
                      xlab="x", ylab="f(x)",main="Trapezoidal Rule", col="red")
               # plots the upper part of the trapezoid
               lines(x@adjusted_x, x@adjusted_y,col = "red")
-              # graphs vertical lines
+              # graphs vertical dotted lines
               segments(x0=x@adjusted_x,y0=0, x1=x@adjusted_x,y1=x@adjusted_y,lty=2)
-              # plots a and b points
+              # graph a and b solid lines
+              segments(x0=x@adjusted_x[1], y0=0, x1=x@adjusted_x[1],y1=x@adjusted_y[1],lty=1)
+              segments(x0=x@adjusted_x[length(x@adjusted_x)], 
+                       y0=0, x1=x@adjusted_x[length(x@adjusted_x)],
+                       y1=x@adjusted_y[length(x@adjusted_x)],lty=1)
+               # plots a and b points
               points(x=x@adjusted_x[1],y=x@adjusted_y[1] + 1, pch="a")
               points(x=x@adjusted_x[length(x@adjusted_x)],
                      y=x@adjusted_y[length(x@adjusted_x)] + 1, pch="b")

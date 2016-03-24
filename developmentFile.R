@@ -11,6 +11,7 @@ current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
 build_win(current.code)
+?integrateIt
 # examples of integrate it
 s =integrateIt(vector_x = 1:11,
             vector_y = 1:11,
@@ -19,10 +20,14 @@ s =integrateIt(vector_x = 1:11,
 t =integrateIt(vector_x = 1:11,
                vector_y = 1:11,
                a = 5,
-               b = 11, rule = "Simp")
+               b = 11, rule = "Trap")
+S =integrateIt(vector_x = 1:7,
+               vector_y = c(1,7,3,8,9,4,6),
+               a = 1,
+               b = 7, rule = "Simp")
 # examples of print
 print(s)
 print(t)
 # examples of plot
-plot(s)
+plot(S)
 plot(t)
