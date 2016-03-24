@@ -36,7 +36,7 @@ setMethod(f = "plot",
             sapply(seq(1,x@n -1,2), function(i) {
               u  <- x@adjusted_x[i]
               w  <- x@adjusted_x[i + 2]
-              v  <- x@adjusted_x[i + 1]
+              v  <- (u + w) / 2
               fu <- x@adjusted_y[i]
               fv <- x@adjusted_y[i + 1]
               fw <- x@adjusted_y[i + 2]
